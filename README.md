@@ -1,11 +1,24 @@
-URL Shortner MicroService
-=================
+# URL Shortner
+
+## Post your URL at
+
+          api/shorturl/new
 
 
-Working version is **here**(https://overjoyed-ground.glitch.me/).
+## You will Recieve JSON contaning
+
+            {
+              Original_Url: 'your url',
+              Key         : 'you key'
+            }
+
+## Use Key as
+
+             [Site URL]/api/shorturl/key
 
 
-Made by [Glitch](https://glitch.com/)
--------------------
+Working version here [https://overjoyed-ground.glitch.me/](https://overjoyed-ground.glitch.me/)
 
-\ ゜o゜)ノ
+## Made by [Glitch](https://glitch.com/)
+
+\ ゜ o ゜)ノ

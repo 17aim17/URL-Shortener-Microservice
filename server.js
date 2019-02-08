@@ -31,17 +31,19 @@ app.post('/api/shorturl/new', (req, res) => {
         });
       } else if (validator.isURL(data)) {
         const sUrl = crypto.randomBytes(4).toString('hex');
+        console.log(sUrl);
+
         const newData = new Url({
           originalUrl: data,
-          shortUrl: sUrl,
-          token: url.shortUrl
+          shortUrl: sUrl
         });
         newData.save().then(url => {
           return res.status(201).json({
             original_url: url.originalUrl,
             short_url: `${req.protocol}://${req.headers.host}/api/shorturl/${
               url.shortUrl
-            }`
+            }`,
+            token: url.shortUrl
           });
         });
       } else {
